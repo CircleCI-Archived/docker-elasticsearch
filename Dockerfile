@@ -4,7 +4,7 @@
 #
  
 # Pull base image.
-FROM dockerfile/java
+FROM dockerfile/java:latest
  
 # Install ElasticSearch.
 RUN \
