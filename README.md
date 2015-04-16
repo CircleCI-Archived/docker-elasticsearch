@@ -15,10 +15,11 @@ Building the docker image on [CircleCI](https://circleci.com/) is as simple as r
 
 ##Deploying to Docker Hub
 
-This example also deploys the built image to Docker Hub after successfully building and testing. See the `deployment` section of [circle.yml](circle.yml) for details on how this is done. Note that two environment variables need to be set on CircleCI for the deployment to work:
+This example also deploys the built image to Docker Hub after successfully building and testing. See the `deployment` section of [circle.yml](circle.yml) for details on how this is done. Note that three environment variables need to be set on CircleCI for the deployment to work:
 
 * DOCKER_EMAIL - The email address associated with the user with push access to the Docker Hub repository
-* DOCKER_AUTH - The auth token associated with the above user (as it appears in `~/.dockercfg` after logging into Docker Hub from the command line)
+* DOCKER_USER - Docker Hub username
+* DOCKER_PASS - Docker Hub password (these are all stored encrypted on CircleCI, and you can create a deployment user with limited permission on Docker Hub if you like)
 
 Also note that the Docker Hub repository name and Docker registry endpoint are hard-coded into [circle.yml](circle.yml) and [.dockercfg.template](.dockercfg.template) respectively and would need to be changed to deploy to a different repository or registry.
 
