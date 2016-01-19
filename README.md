@@ -21,7 +21,7 @@ This example also deploys the built image to Docker Hub after successfully build
 * DOCKER_USER - Docker Hub username
 * DOCKER_PASS - Docker Hub password (these are all stored encrypted on CircleCI, and you can create a deployment user with limited permission on Docker Hub if you like)
 
-Also note that the Docker Hub repository name and Docker registry endpoint are hard-coded into [circle.yml](circle.yml) and [.dockercfg.template](.dockercfg.template) respectively and would need to be changed to deploy to a different repository or registry.
+Also note that the Docker Hub repository name and Docker registry endpoint are hard-coded into [circle.yml](circle.yml) and would need to be changed to deploy to a different repository or registry.
 
 ##See also
 * [CircleCI Home](https://circleci.com)
